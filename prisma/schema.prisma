@@ -45,6 +45,7 @@ model User {
   image         String?
   accounts      Account[]
   sessions      Session[]
+  task          Task[]
 }
 
 model VerificationToken {
@@ -61,4 +62,7 @@ model Task {
   description           String
   done                  Boolean       @default(false)
   createdAt             DateTime      @default(now())
+
+  userId        String
+  user          User        @relation(fields: [userId], references: [id])
 }
