@@ -1,17 +1,14 @@
 import { Calendar } from '../../components/calendar'
-import { Task } from '../../components/task'
+import { TasksList } from './components/TasksList'
 
-export default function Home() {
+export default async function Home() {
   return (
     <main>
       <section className="my-4">
         <Calendar />
       </section>
-      <section className="flex flex-col gap-3 mt-8">
-        <Task id="1" name="Criar banco de dados" isChecked={true} />
-        <Task id="2" name="Arrumar tela de inicio do iphone" isChecked={true} />
-        <Task id="3" name="asudhasudhuasdhasudh" isChecked={true} />
-      </section>
+
+      <TasksList />
     </main>
   )
 }
