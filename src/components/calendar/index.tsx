@@ -32,7 +32,6 @@ export function Calendar() {
   }
 
   const currentDate = getCurrentDate()
-  console.log(currentDate)
 
   return (
     <div className="flex justify-between items-center">
