@@ -2,9 +2,9 @@
 
 import * as Dialog from '@radix-ui/react-dialog'
 import Button from '../button'
-import { XIcon } from 'lucide-react'
+import { TextField } from '../text-field'
 
-export function NewTask() {
+export const NewTask = () => {
   return (
     <Dialog.Root>
       <Dialog.Trigger>
@@ -12,14 +12,17 @@ export function NewTask() {
       </Dialog.Trigger>
       <Dialog.Portal>
         <Dialog.Overlay className="bg-black fixed inset-0 opacity-25" />
-        <Dialog.Content className="bg-slate-800 rounded-md fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] p-6 max-h-[85vh] max-w-[450px]">
-          <Dialog.Title className="DialogTitle">Create a new task</Dialog.Title>
-          {/* <Dialog.Description className="DialogDescription">
-            Make changes to your profile here. Click save when you're done.
-          </Dialog.Description> */}
+        <Dialog.Content className="bg-slate-800 rounded-md fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] p-6 max-h-[85vh] max-w-[400px] w-full">
+          <Dialog.Title>
+            <h3 className="text-lg font-bold">Create a new task</h3>
+          </Dialog.Title>
 
-          <form>
-            <input type="text" placeholder="task name" />
+          <form className="mt-4">
+            <TextField
+              label="Description:"
+              name="description"
+              placeholder="type your task description"
+            />
           </form>
 
           <div className="mt-4 flex items-center justify-end gap-2">
