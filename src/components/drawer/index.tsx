@@ -77,10 +77,14 @@ export const Drawer = () => {
               <ListTodoIcon />
               Daily Tasks
             </NavLink>
-            <NavLink href="#">
+            <a
+              href="https://github.com/vitoorfraga/simple-to-do-list"
+              target="_blank"
+              className="border-[2px] border-slate-600 w-full flex gap-3 p-2 rounded-md hover:bg-slate-600 transition-colors ease-linear"
+            >
               <GithubIcon />
               Github
-            </NavLink>
+            </a>
           </nav>
         </Dialog.Content>
       </Dialog.Portal>
