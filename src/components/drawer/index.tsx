@@ -2,15 +2,27 @@
 
 import * as Dialog from '@radix-ui/react-dialog'
 import Button from '../button'
-import { LogInIcon, MenuIcon, XIcon } from 'lucide-react'
-import { signIn } from 'next-auth/react'
+import {
+  GithubIcon,
+  ListTodoIcon,
+  LogInIcon,
+  MenuIcon,
+  XIcon,
+} from 'lucide-react'
+import { signIn, signOut, useSession } from 'next-auth/react'
+import { Avatar } from '../avatar'
+import { NavLink } from '../navlink'
 
 export const Drawer = () => {
+  const { status, data } = useSession()
+
   const handleLoginClick = async () => {
-    console.log('ijasdijaisdj')
     await signIn()
   }
 
+  const handleLogoutClick = async () => {
+    await signOut()
+  }
   return (
     <Dialog.Root>
       <Dialog.Trigger>
@@ -20,7 +32,7 @@ export const Drawer = () => {
       </Dialog.Trigger>
       <Dialog.Portal>
         <Dialog.Overlay className="bg-black fixed inset-0 opacity-25" />
-        <Dialog.Content className="bg-slate-800 rounded-md fixed top-[50%] left-[0] translate-y-[-50%] p-6 h-full max-w-[20rem] w-full">
+        <Dialog.Content className="bg-slate-800 fixed top-[50%] left-[0] translate-y-[-50%] p-6 h-full max-w-[20rem] w-full rounded-none">
           <Dialog.Close>
             <button className="bg-red-500 h-8 w-8 rounded-md flex items-center justify-center">
               <XIcon />
@@ -30,12 +42,46 @@ export const Drawer = () => {
             <h3 className="text-lg font-bold">Simple To Do List</h3>
           </Dialog.Title>
 
-          <div>
+          {/* => Exibe botão para login caso não tenha usuário autenticado. */}
+          {status === 'unauthenticated' && (
             <Button onClick={() => handleLoginClick()}>
               <LogInIcon size={18} />
               Sign In
             </Button>
-          </div>
+          )}
+
+          {/* => Exibe botão para logout caso tenha usuário autenticado. */}
+          {status === 'authenticated' && (
+            <Button variant="outline" onClick={() => handleLogoutClick()}>
+              <LogInIcon size={18} />
+              Logout
+            </Button>
+          )}
+
+          {/* => Exibe foto e nome do usuário (caso possua). */}
+          {status === 'authenticated' && (
+            <div className="mt-8 flex items-center gap-3">
+              {data.user?.image && (
+                <Avatar
+                  imageUrl={data.user?.image}
+                  userName={data.user?.name ? data.user?.name : ''}
+                />
+              )}
+              <p>{data.user?.name}</p>
+            </div>
+          )}
+
+          {/* => Navbar */}
+          <nav className="flex flex-col gap-3 mt-6 ">
+            <NavLink href="#">
+              <ListTodoIcon />
+              Daily Tasks
+            </NavLink>
+            <NavLink href="#">
+              <GithubIcon />
+              Github
+            </NavLink>
+          </nav>
         </Dialog.Content>
       </Dialog.Portal>
     </Dialog.Root>
