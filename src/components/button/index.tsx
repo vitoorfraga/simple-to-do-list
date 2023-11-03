@@ -5,9 +5,13 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode
 }
 
-export default function Button({ variant = 'primary', children }: ButtonProps) {
+export default function Button({
+  variant = 'primary',
+  children,
+  ...rest
+}: ButtonProps) {
   const defaultStyles =
-    'flex gap-1 py-1 px-3 rounded-md items-center text-base transition delay-20'
+    'flex gap-3 py-1 px-3 rounded-md items-center text-base transition delay-20'
 
   function getVariantStyles(
     variant: 'primary' | 'outline' | 'confirm' | 'cancel',
@@ -19,12 +23,14 @@ export default function Button({ variant = 'primary', children }: ButtonProps) {
       cancel: 'text-slate-200 bg-red-500 hover:bg-red-400',
     }
 
-    console.log(variants[variant])
-
     return variants[variant]
   }
 
   const styles = getVariantStyles(variant)
 
-  return <button className={`${defaultStyles} ${styles}`}>{children}</button>
+  return (
+    <button className={`${defaultStyles} ${styles}`} {...rest}>
+      {children}
+    </button>
+  )
 }
