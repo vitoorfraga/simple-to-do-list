@@ -1,6 +1,4 @@
 import { MenuIcon } from 'lucide-react'
-import * as Dialog from '@radix-ui/react-dialog'
-import Button from '../button'
 import { NewTask } from '../new-task'
 
 export function Header() {
