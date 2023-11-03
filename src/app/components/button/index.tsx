@@ -16,7 +16,7 @@ export default function Button({ variant = 'primary', children }: ButtonProps) {
       primary: 'bg-cyan-900 hover:bg-cyan-800',
       outline: 'bg-none border-[1px] border-slate-600 hover:bg-cyan-900',
       confirm: 'text-slate-950 bg-green-500 hover:bg-green-400 ',
-      cancel: 'text-slate-950 bg-red-500 hover:bg-red-400',
+      cancel: 'text-slate-200 bg-red-500 hover:bg-red-400',
     }
 
     console.log(variants[variant])
