@@ -25,7 +25,7 @@ export const Drawer = () => {
   }
   return (
     <Dialog.Root>
-      <Dialog.Trigger>
+      <Dialog.Trigger asChild>
         <button className="flex items-center justify-center">
           <MenuIcon />
         </button>
@@ -33,7 +33,7 @@ export const Drawer = () => {
       <Dialog.Portal>
         <Dialog.Overlay className="bg-black fixed inset-0 opacity-25" />
         <Dialog.Content className="bg-slate-800 fixed top-[50%] left-[0] translate-y-[-50%] p-6 h-full max-w-[20rem] w-full rounded-none">
-          <Dialog.Close>
+          <Dialog.Close asChild>
             <button className="bg-red-500 h-8 w-8 rounded-md flex items-center justify-center">
               <XIcon />
             </button>
