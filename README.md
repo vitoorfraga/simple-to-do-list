@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
+  
+![Projeto em desenvolvimento](https://raw.githubusercontent.com/vitoorfraga/simple-to-do-list/main/public/dev-badge.png)
 
-## Getting Started
+</div>
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# Simple To Do List ✅
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+O Simple To Do List é uma aplicação simples e intuitiva para ajudá-lo a organizar suas tarefas diárias, aumentar sua produtividade e manter-se focado no que é realmente importante. Com uma interface amigável. A aplicação foi desenvolvida pensando em você, para simplificar a gestão de suas atividades diárias.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Tecnologias 🚀
 
-To learn more about Next.js, take a look at the following resources:
+- React: Uma biblioteca JavaScript popular para construir interfaces de usuário interativas.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Next.js 13: Um framework React que oferece renderização do lado do servidor (SSR), geração estática (SSG), entre muitos outros recursos.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Next Auth: Biblioteca para autenticação de usuários com OAuth.
 
-## Deploy on Vercel
+- Postgres: Um sistema de gerenciamento de banco de dados relacional.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Prisma: Um ORM (Object-Relational Mapping) para Node.js e TypeScript.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Tailwind CSS: Um framework CSS que oferece várias classes para utilização já pré-estilizadas.
+
+
+## Funcionalidades 📦
+
+- **Login com google:** Oferecemos aos nossos usuários a conveniência de acessar nossa plataforma com apenas um clique, utilizando suas contas do Google. Esse método de autenticação simplificado proporciona uma entrada fácil e segura ao mundo das tarefas organizadas.
+
+- **Visualizar tarefas:** Com apenas alguns cliques, os usuários podem visualizar todas as suas tarefas de forma rápida e intuitiva. A interface proporciona uma experiência de navegação fluida, permitindo que você mantenha o controle total de suas atividades com facilidade.
+
+- **Criação de tarefas (Em breve):** Em breve, o usuário poderá criar um número ilimitado de tarefas para transformar seu dia a dia em algo mais produtivo e organizado. Esta funcionalidade de criação de tarefas intuitiva e fácil de usar será sua aliada na gestão eficaz do seu tempo e na consecução de seus objetivos.
+
+- **Finalizar tarefa (Em breve):** Em um futuro próximo, o usuário terá a capacidade de marcar suas tarefas como concluídas. Essa funcionalidade permite que você acompanhe seu progresso de maneira clara e visual, ajudando-o a manter o foco nas atividades mais importantes de sua lista.
+
+- **Excluir tarefa (Em breve):** Estamos implementando a opção de exclusão de tarefas para fornecer total flexibilidade no gerenciamento de suas atividades. Se uma tarefa não for mais relevante ou necessária, você poderá removê-la com facilidade, mantendo sua lista de tarefas organizada e livre de distrações
+  
+## Variaveis de ambiente 🕵🏻‍♂️
+Para executar este projeto, você precisará adicionar as seguintes variáveis de ambiente ao seu arquivo .env.
+
+`DATABASE_URL`
+
+`GOOGLE_CLIENT_SECRET`
+
+
+## Support ❓
+
+Para suporte, envie um email para vitorfragaps@gmail.com ou através do discord *vitoorfrag*.
+
+
+## Contribuições e Colaborações 🤝
+Este projeto está totalmente aberto a contribuições. Se você deseja colaborar, fique à vontade para criar pull requests, corrigir bugs, adicionar novos recursos ou aprimorar a documentação. Sua contribuição é valiosa e ajuda a melhorar ainda mais este projeto!
+
+Como Contribuir
+Faça um fork deste repositório.
+
+Crie uma branch para sua contribuição:
+
+    git checkout -b minha-contribuicao
+Faça suas alterações e adicione commits descritivos (seguindo o Conventional Commits, preferencialmente).
+
+Crie um pull request para a branch main deste repositório.
+
