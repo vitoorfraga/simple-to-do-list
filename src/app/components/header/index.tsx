@@ -1,9 +1,17 @@
+import { MenuIcon } from 'lucide-react'
+import * as Dialog from '@radix-ui/react-dialog'
+import Button from '../button'
+import { NewTask } from '../new-task'
+
 export function Header() {
   return (
-    <header className="text-lg border-b-[1px] border-slate-700 h-16 flex justify-center items-center uppercase font-bold text-slate-300">
+    <header className="text-lg border-b-[1px] border-slate-700 h-16 flex justify-between items-center uppercase text-slate-300 px-4">
+      <MenuIcon />
       <h1>
-        Simple <span className="text-amber-400">To Do</span> List
+        Simple <span className="text-amber-400  font-bold">To Do</span> List
       </h1>
+
+      <NewTask />
     </header>
   )
 }
