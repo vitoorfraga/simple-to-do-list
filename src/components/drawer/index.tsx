@@ -33,7 +33,7 @@ export const Drawer = () => {
           <div>
             <Button onClick={() => handleLoginClick()}>
               <LogInIcon size={18} />
-              Entrar
+              Sign In
             </Button>
           </div>
         </Dialog.Content>
