@@ -4,12 +4,14 @@ import { Drawer } from '../drawer'
 export function Header() {
   return (
     <header className="text-lg border-b-[1px] border-slate-700 h-16 flex justify-between items-center uppercase text-slate-300 px-4">
-      <Drawer />
-      <h1>
-        Simple <span className="text-amber-400  font-bold">To Do</span> List
-      </h1>
+      <div className="w-24 flex items-center">
+        <Drawer />
+      </div>
+      <h1 className="font-bold">TO DO</h1>
 
-      <NewTask />
+      <div className="w-24">
+        <NewTask />
+      </div>
     </header>
   )
 }
