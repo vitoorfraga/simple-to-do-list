@@ -6,10 +6,15 @@ import { TextField } from '../text-field'
 import { createTask } from '@/actions/new-task'
 import { useSession } from 'next-auth/react'
 import { FormEvent, useState } from 'react'
+import { useFetching } from '@/hooks/useFetching'
+import { InfoIcon } from 'lucide-react'
 
 export const NewTask = () => {
   const { data } = useSession()
   const [taskDescription, setTaskDescription] = useState('')
+  const { isFetching, activeFetching, disableFetching } = useFetching()
+
+  const isUserAuthenticated = !data?.user
 
   const handleCreateTaskClick = async (event: FormEvent) => {
     event.preventDefault()
@@ -18,7 +23,10 @@ export const NewTask = () => {
       // Redireciona para o login
       return
     }
+    activeFetching()
     await createTask(taskDescription, (data?.user).id)
+    disableFetching()
+    setTaskDescription('')
   }
 
   return (
@@ -28,10 +36,15 @@ export const NewTask = () => {
       </Dialog.Trigger>
       <Dialog.Portal>
         <Dialog.Overlay className="bg-black fixed inset-0 opacity-25" />
-        <Dialog.Content className="bg-slate-800 rounded-md fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] p-6 max-h-[85vh] max-w-[400px] w-full">
+        <Dialog.Content className="bg-slate-800 rounded-md fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] p-6 max-h-[85vh] max-w-[400px] w-full flex flex-col gap-3">
           <Dialog.Title>
             <h3 className="text-lg font-bold">Create a new task</h3>
           </Dialog.Title>
+
+          <div className="flex gap-2 items-center bg-slate-700 text-slate-400 p-2 rounded-md text-sm">
+            <InfoIcon size={16} />
+            <p>Please log in to create new tasks.</p>
+          </div>
 
           <form
             className="mt-4"
@@ -42,6 +55,7 @@ export const NewTask = () => {
               name="description"
               placeholder="type your task description"
               value={taskDescription}
+              disabled={isFetching || isUserAuthenticated}
               onChange={({ target }) => setTaskDescription(target.value)}
             />
 
@@ -50,7 +64,12 @@ export const NewTask = () => {
                 <Button variant="cancel">Cancel</Button>
               </Dialog.Close>
 
-              <Button variant="confirm">Confirm</Button>
+              <Button
+                variant="confirm"
+                disabled={isFetching || isUserAuthenticated}
+              >
+                Confirm
+              </Button>
             </div>
           </form>
         </Dialog.Content>
