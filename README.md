@@ -32,7 +32,7 @@ O Simple To Do List é uma aplicação simples e intuitiva para ajudá-lo a orga
 
 - **Visualizar tarefas:** Com apenas alguns cliques, os usuários podem visualizar todas as suas tarefas de forma rápida e intuitiva. A interface proporciona uma experiência de navegação fluida, permitindo que você mantenha o controle total de suas atividades com facilidade.
 
-- **Criação de tarefas (Em breve):** Em breve, o usuário poderá criar um número ilimitado de tarefas para transformar seu dia a dia em algo mais produtivo e organizado. Esta funcionalidade de criação de tarefas intuitiva e fácil de usar será sua aliada na gestão eficaz do seu tempo e na consecução de seus objetivos.
+- **Criação de tarefas:** O usuário pode criar um número ilimitado de tarefas para transformar seu dia a dia em algo mais produtivo e organizado. Esta funcionalidade de criação de tarefas intuitiva e fácil de usar será sua aliada na gestão eficaz do seu tempo e na consecução de seus objetivos.
 
 - **Finalizar tarefa (Em breve):** Em um futuro próximo, o usuário terá a capacidade de marcar suas tarefas como concluídas. Essa funcionalidade permite que você acompanhe seu progresso de maneira clara e visual, ajudando-o a manter o foco nas atividades mais importantes de sua lista.
 
@@ -42,8 +42,9 @@ O Simple To Do List é uma aplicação simples e intuitiva para ajudá-lo a orga
 Para executar este projeto, você precisará adicionar as seguintes variáveis de ambiente ao seu arquivo .env.
 
 `DATABASE_URL`
-
 `GOOGLE_CLIENT_SECRET`
+`GOOGLE_CLIENT_SECRET`
+`NEXTAUTH_URL`
 
 
 ## Support ❓
