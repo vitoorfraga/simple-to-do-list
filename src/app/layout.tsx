@@ -17,12 +17,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body className={`${inter.className}flex h-full flex-col`}>
-        <AuthProvider>
+      <AuthProvider>
+        <body
+          className={`${inter.className} flex h-full flex-col min-h-screen`}
+        >
           <Header />
           <main className="flex-1 p-4 mt-2">{children}</main>
-        </AuthProvider>
-      </body>
+        </body>
+      </AuthProvider>
     </html>
   )
 }
