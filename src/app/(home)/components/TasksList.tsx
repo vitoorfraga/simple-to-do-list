@@ -7,7 +7,6 @@ export const dynamic = 'force-dynamic'
 
 export const TasksList = async () => {
   const session = await getServerSession(authOptions)
-  console.log(session)
 
   const tasks = await prismaClient.task.findMany({
     where: {
