@@ -41,10 +41,12 @@ export const NewTask = () => {
             <h3 className="text-lg font-bold">Create a new task</h3>
           </Dialog.Title>
 
-          <div className="flex gap-2 items-center bg-slate-700 text-slate-400 p-2 rounded-md text-sm">
-            <InfoIcon size={16} />
-            <p>Please log in to create new tasks.</p>
-          </div>
+          {isUserAuthenticated && (
+            <div className="flex gap-2 items-center bg-slate-700 text-slate-400 p-2 rounded-md text-sm">
+              <InfoIcon size={16} />
+              <p>Please log in to create new tasks.</p>
+            </div>
+          )}
 
           <form
             className="mt-4"
