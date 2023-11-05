@@ -17,8 +17,8 @@ export const TasksList = async () => {
 
   if (!session) {
     return (
-      <p className="text-center flex-1 bg-[red] h-full max-h-full">
-        É necessário estar logado.
+      <p className="text-center flex-1 mt-16 h-full max-h-full">
+        You need to be logged in.
       </p>
     )
   }
