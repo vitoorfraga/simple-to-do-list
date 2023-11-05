@@ -12,7 +12,7 @@ export const TextField = ({ label, name, ...rest }: TextFieldProps) => {
       <input
         id={name}
         {...rest}
-        className="bg-slate-900 p-2 rounded-md text-slate-300 focus:outline-none focus:border-slate-900"
+        className="bg-slate-900 p-2 rounded-md text-slate-300 focus:outline-none focus:border-slate-900 disabled:cursor-not-allowed"
       />
     </div>
   )
