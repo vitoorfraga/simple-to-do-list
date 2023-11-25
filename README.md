@@ -25,6 +25,8 @@ O Simple To Do List é uma aplicação simples e intuitiva para ajudá-lo a orga
 
 - Tailwind CSS: Um framework CSS que oferece várias classes para utilização já pré-estilizadas.
 
+- Radix UI: biblioteca que oferece uma ampla gama de componentes primitivos.
+
 
 ## Funcionalidades 📦
 
