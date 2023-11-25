@@ -34,7 +34,6 @@ export function Task({ id, name, isChecked }: TaskProps) {
         id={id.toString()}
         checked={isChecked}
         onCheckedChange={() => {
-          // setIsCheckedState(!isCheckedState)
           if (!isChecked) {
             handleFinishedTask(id)
           }
