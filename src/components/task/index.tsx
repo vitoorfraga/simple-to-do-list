@@ -1,8 +1,8 @@
 'use client'
 
+import { finishTask } from '@/actions/finish-task'
 import * as Checkbox from '@radix-ui/react-checkbox'
 import { CheckIcon } from 'lucide-react'
-import { useState } from 'react'
 
 interface TaskProps {
   id: number
@@ -11,20 +11,34 @@ interface TaskProps {
 }
 
 export function Task({ id, name, isChecked }: TaskProps) {
-  const [isCheckedState, setIsCheckedState] = useState(isChecked)
+  console.log(isChecked)
+
+  const handleFinishedTask = (id: number) => {
+    finishTask(id)
+      .then(() => {
+        console.log('Finalizou a task')
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  }
+
   return (
     <label
       htmlFor={id.toString()}
       className={`flex items-center justify-between gap-2 h-14 p-4 rounded-md border-[1px] border-indigo-950 hover:bg-slate-900 cursor-pointer ${
-        isCheckedState && 'bg-slate-900'
+        isChecked && 'bg-slate-900'
       }`}
     >
-      <span className={`${isCheckedState && 'line-through'}`}>{name}</span>
+      <span className={`${isChecked && 'line-through'}`}>{name}</span>
       <Checkbox.Root
         id={id.toString()}
-        checked={isCheckedState}
+        checked={isChecked}
         onCheckedChange={() => {
-          setIsCheckedState(!isCheckedState)
+          // setIsCheckedState(!isCheckedState)
+          if (!isChecked) {
+            handleFinishedTask(id)
+          }
         }}
         className="border-[1px] border-none rounded-[4px] bg-indigo-900ß w-5 h-5 flex items-center justify-center text-green-500"
       >
