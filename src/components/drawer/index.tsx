@@ -3,6 +3,7 @@
 import * as Dialog from '@radix-ui/react-dialog'
 import Button from '../button'
 import {
+  CheckIcon,
   GithubIcon,
   ListTodoIcon,
   LogInIcon,
@@ -75,7 +76,12 @@ export const Drawer = () => {
           <nav className="flex flex-col gap-3 mt-6 ">
             <NavLink href="#">
               <ListTodoIcon />
-              Daily Tasks
+              Tasks
+            </NavLink>
+
+            <NavLink href="/finished">
+              <CheckIcon />
+              Finished
             </NavLink>
             <a
               href="https://github.com/vitoorfraga/simple-to-do-list"
