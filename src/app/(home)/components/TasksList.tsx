@@ -2,6 +2,7 @@ import { Task as TaskCard } from '@/components/task'
 import { authOptions } from '@/lib/auth'
 import { prismaClient } from '@/lib/prisma'
 import { getServerSession } from 'next-auth'
+import { Toaster } from 'sonner'
 
 export const dynamic = 'force-dynamic'
 
@@ -34,6 +35,8 @@ export const TasksList = async () => {
           />
         )
       })}
+
+      <Toaster />
     </section>
   )
 }
