@@ -3,6 +3,7 @@
 import { finishTask } from '@/actions/finish-task'
 import * as Checkbox from '@radix-ui/react-checkbox'
 import { CheckIcon } from 'lucide-react'
+import { toast } from 'sonner'
 
 interface TaskProps {
   id: number
@@ -11,15 +12,13 @@ interface TaskProps {
 }
 
 export function Task({ id, name, isChecked }: TaskProps) {
-  console.log(isChecked)
-
   const handleFinishedTask = (id: number) => {
     finishTask(id)
       .then(() => {
-        console.log('Finalizou a task')
+        toast.success('Task completed successfully 🚀.')
       })
-      .catch((err) => {
-        console.log(err)
+      .catch(() => {
+        toast.error('Unable to complete your task 😭.')
       })
   }
 
