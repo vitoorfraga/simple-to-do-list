@@ -74,7 +74,7 @@ export const Drawer = () => {
 
           {/* => Navbar */}
           <nav className="flex flex-col gap-3 mt-6 ">
-            <NavLink href="#">
+            <NavLink href="/">
               <ListTodoIcon />
               Tasks
             </NavLink>
