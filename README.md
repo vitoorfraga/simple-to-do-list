@@ -34,7 +34,7 @@ O Simple To Do List é uma aplicação simples e intuitiva para ajudá-lo a orga
 
 - **Criação de tarefas:** O usuário pode criar um número ilimitado de tarefas para transformar seu dia a dia em algo mais produtivo e organizado. Esta funcionalidade de criação de tarefas intuitiva e fácil de usar será sua aliada na gestão eficaz do seu tempo e na consecução de seus objetivos.
 
-- **Finalizar tarefa (Em breve):** Em um futuro próximo, o usuário terá a capacidade de marcar suas tarefas como concluídas. Essa funcionalidade permite que você acompanhe seu progresso de maneira clara e visual, ajudando-o a manter o foco nas atividades mais importantes de sua lista.
+- **Finalizar tarefa:** O usuário tem a possibilidade de marcar suas tarefas como concluídas. Essa funcionalidade permite que você acompanhe seu progresso de maneira clara e visual, ajudando-o a manter o foco nas atividades mais importantes de sua lista.
 
 - **Excluir tarefa (Em breve):** Estamos implementando a opção de exclusão de tarefas para fornecer total flexibilidade no gerenciamento de suas atividades. Se uma tarefa não for mais relevante ou necessária, você poderá removê-la com facilidade, mantendo sua lista de tarefas organizada e livre de distrações
   
