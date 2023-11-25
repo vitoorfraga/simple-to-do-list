@@ -14,8 +14,8 @@ export const finishTask = async (taskId: number) => {
       },
     })
 
-    console.log(response)
     revalidatePath('/')
+    return response
   } catch (err) {
     console.log(err)
   }
