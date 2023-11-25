@@ -8,6 +8,7 @@ import { useSession } from 'next-auth/react'
 import { FormEvent, useState } from 'react'
 import { useFetching } from '@/hooks/useFetching'
 import { InfoIcon } from 'lucide-react'
+import { toast } from 'sonner'
 
 export const NewTask = () => {
   const { data } = useSession()
@@ -24,9 +25,14 @@ export const NewTask = () => {
       return
     }
     activeFetching()
-    await createTask(taskDescription, (data?.user).id)
-    disableFetching()
-    setTaskDescription('')
+    try {
+      await createTask(taskDescription, (data?.user).id)
+      disableFetching()
+      setTaskDescription('')
+      toast.success('Task created successfully 😃')
+    } catch {
+      toast.error("No, I couldn't create your task 😭")
+    }
   }
 
   return (
