@@ -12,6 +12,7 @@ export const TasksList = async () => {
   const tasks = await prismaClient.task.findMany({
     where: {
       userId: session?.user.id,
+      done: false,
     },
   })
 
@@ -22,6 +23,16 @@ export const TasksList = async () => {
       </p>
     )
   }
+
+  if (tasks.length === 0) {
+    return (
+      <p className="text-center flex-1 mt-16 h-full max-h-full">
+        You have no pending tasks 🤯
+      </p>
+    )
+  }
+
+  console.log(tasks.length)
 
   return (
     <section className="flex flex-col gap-3 mt-8">
