@@ -32,8 +32,6 @@ export const TasksList = async () => {
     )
   }
 
-  console.log(tasks.length)
-
   return (
     <section className="flex flex-col gap-3 mt-8">
       {tasks.map((task) => {
