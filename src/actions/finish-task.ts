@@ -17,6 +17,6 @@ export const finishTask = async (taskId: number) => {
     revalidatePath('/')
     return response
   } catch (err) {
-    console.log(err)
+    return err
   }
 }
