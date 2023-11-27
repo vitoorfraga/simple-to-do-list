@@ -13,8 +13,11 @@ import {
 import { signIn, signOut, useSession } from 'next-auth/react'
 import { Avatar } from '../avatar'
 import { NavLink } from '../navlink'
+import { useState } from 'react'
 
 export const Drawer = () => {
+  const [open, setOpen] = useState(false)
+
   const { status, data } = useSession()
 
   const handleLoginClick = async () => {
@@ -25,7 +28,7 @@ export const Drawer = () => {
     await signOut()
   }
   return (
-    <Dialog.Root>
+    <Dialog.Root modal={false} open={open} onOpenChange={setOpen}>
       <Dialog.Trigger asChild>
         <button className="flex items-center justify-center">
           <MenuIcon />
@@ -74,12 +77,12 @@ export const Drawer = () => {
 
           {/* => Navbar */}
           <nav className="flex flex-col gap-3 mt-6 ">
-            <NavLink href="/">
+            <NavLink href="/" onClick={() => setOpen(false)}>
               <ListTodoIcon />
               Tasks
             </NavLink>
 
-            <NavLink href="/finished">
+            <NavLink href="/finished" onClick={() => setOpen(false)}>
               <CheckIcon />
               Finished
             </NavLink>
