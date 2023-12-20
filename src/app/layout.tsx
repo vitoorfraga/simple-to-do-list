@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="pt-br">
+    <html lang="en">
       <AuthProvider>
         <body
           className={`${inter.className} flex h-full flex-col min-h-screen`}
