@@ -1,9 +1,3 @@
-<div align="center">
-  
-![Projeto em desenvolvimento](https://raw.githubusercontent.com/vitoorfraga/simple-to-do-list/main/public/dev-badge.png)
-
-</div>
-
 
 # Simple To Do List ✅
 
@@ -50,7 +44,6 @@ Para executar este projeto, você precisará adicionar as seguintes variáveis d
 
 
 ## Support ❓
-
 Para suporte, envie um email para vitorfragaps@gmail.com ou através do discord *vitoorfrag*.
 
 
