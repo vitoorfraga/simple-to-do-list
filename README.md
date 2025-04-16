@@ -1,7 +1,7 @@
 
-# Simple To Do List ✅
+# To Do List FS ✅
 
-O Simple To Do List é uma aplicação simples e intuitiva para ajudá-lo a organizar suas tarefas diárias, aumentar sua produtividade e manter-se focado no que é realmente importante. Com uma interface amigável. A aplicação foi desenvolvida pensando em você, para simplificar a gestão de suas atividades diárias.
+To Do List FS é uma aplicação simples e intuitiva para ajudá-lo a organizar suas tarefas diárias, aumentar sua produtividade e manter-se focado no que é realmente importante. Com uma interface amigável. A aplicação foi desenvolvida pensando em você, para simplificar a gestão de suas atividades diárias.
 
 
 
